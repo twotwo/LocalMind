@@ -18,3 +18,4 @@ rm -rf /usr/local/lib/python3.10/dist-packages/jaraco
 sed -i 's/can_run_as_root=0/can_run_as_root=1/' /root/gpufree-data/stable-diffusion-webui/webui.sh
 mkdir /root/gpufree-data/stable-diffusion-webui/openai
 curl -L https://pkm.li3huo.com/local_mind/clip-vit-large-patch14.tar.gz | tar -xz -C /root/gpufree-data/stable-diffusion-webui/openai
+curl -L https://pkm.li3huo.com/local_mind/sd-localizations-zh_CN.json -o /root/gpufree-data/stable-diffusion-webui/localizations/zh_CN.json
