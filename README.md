@@ -20,82 +20,52 @@ LocalMind 是一个开源项目，旨在帮助用户轻松部署、管理和使�
 
 以下步骤将帮助你快速部署一个大语言模型。
 
-### 1. 环境准备
+### 1. 租用实例
 
-确保系统满足以下基本要求：
+确保算力实例满足以下基本要求：
 
-- **操作系统**：Linux (推荐 Ubuntu 20.04+), ~~macOS, 或 Windows (通过 WSL2)~~
+- **操作系统**：Ubuntu 22.04+
 - **硬件**：
   - GPU (推荐 NVIDIA GPU，支持 CUDA)
   - 至少 16GB 内存
   - 充足的存储空间
 - **依赖工具**：
-  - ~~Docker 或 Podman~~
   - Python 3.10+
+  - PyTorch 2.0+
+  - JupyterLab
   - Git
 
 ### 2. 安装 LocalMind
 
+实例启动成功后，在快捷工具栏会出现 JupyterLab 链接。
+
+进入终端界面，输入一下代码
+
 ```bash
 # 克隆项目代码
 git clone https://github.com/twotwo/LocalMind.git
-
-# 切换到项目目录
-cd LocalMind
-
-# 安装依赖
-pip install -r requirements.txt
 ```
 
-### 3. 下载模型
+### 3. 安装服务
 
-根据需要选择支持的模型并下载：
+在 JupyterLab 界面上，切换到项目目录：LocalMind
+根据需要选择对应的安装脚本(*-installation.ipynb)：
+  - ollama-installation.ipynb
+  - sd-webui-installation.ipynb
+
+按照脚本中的提示，完成服务的安装和启动
+
+### 4. 访问服务
+
+在管理实例的界面上，选择“自定义服务”，拷贝对应的启动脚本
+
+黏贴到本地的终端中，类似
 
 ```bash
-# 示例：下载 LLaMA 模型
-python scripts/download_model.py --model llama-7b
-```
-
-### 4. 启动服务
-
-使用默认配置快速启动服务：
-
-```bash
-python main.py --config configs/default.yaml
+ssh -CNg -L 7860:127.0.0.1:7860 root@gpucloud.com
 ```
 
 访问 [http://localhost:7860](http://localhost:7860) 开始使用！
-
----
-
-## 高级配置
-
-LocalMind 提供丰富的配置选项以满足不同场景需求。以下是一些常见的配置：
-
-### 修改模型路径
-
-在 `configs/default.yaml` 中修改 `model_path`：
-
-```yaml
-model_path: "/path/to/your/model"
-```
-
-### 自定义端口
-
-通过命令行参数指定端口：
-
-```bash
-python main.py --config configs/default.yaml --port 8000
-```
-
-### 开启多 GPU 支持
-
-在配置文件中启用多 GPU：
-
-```yaml
-multi_gpu: true
-gpu_ids: [0, 1]
-```
 
 ---
 
