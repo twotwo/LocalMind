@@ -39,11 +39,13 @@ LocalMind 是一个开源项目，旨在帮助用户轻松部署、管理和使�
 
 实例启动成功后，在快捷工具栏会出现 JupyterLab 链接。
 
-进入终端界面，输入一下代码
+进入终端界面，输入以下代码
 
 ```bash
 # 克隆项目代码
 git clone https://github.com/twotwo/LocalMind.git
+# 如果访问 github.com 失败，可以试一下
+git clone https://github.site/twotwo/LocalMind.git
 ```
 
 ### 3. 安装服务
