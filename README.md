@@ -52,8 +52,8 @@ git clone https://github.site/twotwo/LocalMind.git
 
 在 JupyterLab 界面上，切换到项目目录：LocalMind
 根据需要选择对应的安装脚本(*-installation.ipynb)：
-  - ollama-installation.ipynb
-  - sd-webui-installation.ipynb
+  - ollama-installation.ipynb https://ollama.com
+  - sd-webui-installation.ipynb [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 
 按照脚本中的提示，完成服务的安装和启动
 
