@@ -39,19 +39,21 @@ LocalMind 是一个开源项目，旨在帮助用户轻松部署、管理和使�
 
 实例启动成功后，在快捷工具栏会出现 JupyterLab 链接。
 
-进入终端界面，输入一下代码
+进入终端界面，输入以下代码
 
 ```bash
 # 克隆项目代码
 git clone https://github.com/twotwo/LocalMind.git
+# 如果访问 github.com 失败，可以试一下
+git clone https://github.site/twotwo/LocalMind.git
 ```
 
 ### 3. 安装服务
 
 在 JupyterLab 界面上，切换到项目目录：LocalMind
 根据需要选择对应的安装脚本(*-installation.ipynb)：
-  - ollama-installation.ipynb
-  - sd-webui-installation.ipynb
+  - ollama-installation.ipynb https://ollama.com
+  - sd-webui-installation.ipynb [stable-diffusion-webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui)
 
 按照脚本中的提示，完成服务的安装和启动
 
